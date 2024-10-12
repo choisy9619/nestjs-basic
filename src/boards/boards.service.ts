@@ -8,7 +8,7 @@ import { BoardStatus } from './board-status-enum';
 export class BoardsService {
   constructor(private boardRepository: BoardRepository) {}
 
-  createBoard(createBoardDto: CreateBoardDto): Promise<Board> {
+  async createBoard(createBoardDto: CreateBoardDto): Promise<Board> {
     return this.boardRepository.createBoard(createBoardDto);
   }
 
